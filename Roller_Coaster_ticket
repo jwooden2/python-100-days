@@ -1,0 +1,25 @@
+# Roller Coaster hieght checker and ticket sales
+print("Welcome to the rollercoaster!\n")
+height = int(input("What is your height in cm?\n"))
+bill = 0
+if height >= 120:
+ print("You can ride!")
+ age = int(input("What is your age?\n"))
+ if age < 12:
+  bill = 5  
+  print("Your ticket will be $5")
+ elif age  <= 18:
+  bill = 7
+  print("Your ticket will be $7")  
+ else:
+  bill = 15
+  print("Your ticket will be $15")
+
+ photo_wanted = input("Do you want a photo? Type Y for yes and N for no.\n")
+ if photo_wanted == "Y" or photo_wanted == "y":
+    bill = bill + 3
+ print(f"Your ticket is ${bill}")
+
+
+else:
+ print("You can't ride shorty!")
