@@ -1,0 +1,26 @@
+# This is a "True Love Calculator" that counts the occurances of the letters T R U E L O V E in two names and creates a score to determine compatibilty. It's silly but 
+# the excersize uses casting, if/else conditons, and and/or conditions.
+
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+names = (name1 +name2).lower()
+t = names.count("t")
+r = names.count("r")
+u = names.count("u")
+e = names.count("e")
+l = names.count("l")
+o = names.count("o")
+v = names.count("v")
+e2 = names.count("e")
+true = str(t + r + u + e)
+love = str(l + o+ + v + e2)
+true_love_score = true + love
+true_love_score_int = int(true_love_score)
+if  true_love_score_int < 10 or true_love_score_int > 90:
+    print(f"Your score is {true_love_score}, you go together like coke and mentos.")
+elif true_love_score_int  > 40 and true_love_score_int < 50:
+    print(f"Your score is {true_love_score}, you are alright together.")
+else:
+    print(f"Your score is {true_love_score}.")
