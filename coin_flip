@@ -1,0 +1,9 @@
+# A coin flip generator
+
+import random
+
+coinflip = random.randint(0,1)
+if coinflip == 0:
+    print("Tails")
+else:
+    print("Heads")
