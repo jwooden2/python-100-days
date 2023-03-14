@@ -1,0 +1,48 @@
+# This is a mini choose your own adventure game using if/else conditions to guide the user. 
+
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+print("You climb through the jungle until you find a narrow path. You can only go left or right.")
+choice1 = input("Do you go left or right?\n").lower()
+# print(choice1)
+if choice1 == "left":
+  print("You follow the path to a small lake. There is an island in the middle of the lake. Along the shore there is an old dock. You can try to swim or wait for a boat.")
+  choice2 = input("Type wait to wait for the boat, or swim to try to swim to the island.\n").lower()
+  if choice2 == "wait":
+    print("After about ten minutes a boat glides into the old dock, manned by a hooded ferryman. You get into the boat and the ferryman takes you across the lake to the island. After some exploring you come to a small stone building with three doors, one Red, one Blue, one Yellow.")
+    choice3 = input("Which door do you choose?\n").lower()
+    if choice3 == "red":
+      print("You open the red door. Flames burst out and you are engulfed. Game Over.")
+    elif choice3 == "blue":
+      print("You open the blue door. A large tenticle whips out and drags you in. Game Over.")
+    elif choice3 == "yellow":
+      print("You open the yellow door. Inside you find a small chest. After checking for traps you open the lid. Inside you find piles of loot. You win!")
+    else:
+      print("You decide not to open any door. But you can't find your way back to the lake. You sit against a tree and a large snake comes down and eats you. Game over.")
+  else:
+    print("You jump into the water and start to swim. There is a tug on your foot. You look down into the murk only to see the gaping maw of an alligator. Game Over.")
+else:
+  print("The path narrows and you become entangled in vines. You die of starvation. Game Over.")
