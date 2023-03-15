@@ -1,0 +1,65 @@
+# A Rock-Paper-Scissor emulator that uses random umber generator. 
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+
+user_throw = input("Type 0 for Rock, 1 for Paper, or 2 for Scissors\n")
+
+if user_throw == "0": 
+  print(rock)
+if user_throw == "1":
+  print(paper)
+if user_throw == "2":
+  print(scissors)
+
+print("I pick...")
+computer_throw = str(random.randint(0,2))
+
+if computer_throw == "0": 
+  print(rock)
+if computer_throw == "1":
+  print(paper)
+if computer_throw == "2":
+  print(scissors)
+
+if user_throw == computer_throw:
+  print("It's a draw!")
+if user_throw == "0" and computer_throw == "2":
+  print("Rock beats Scissors! You win!")
+if user_throw == "0" and computer_throw == "1":
+  print("Paper beats Rock. I win!")
+if user_throw == "1" and computer_throw == "0":
+  print("Paper beats Rock! You win!")
+if user_throw == "1" and computer_throw =="2":
+  print("Scissors beats Paper! I win!")
+if user_throw == "2" and computer_throw == "0":
+  print("Rock beats Scissors! I win!")
+if user_throw == "2" and computer_throw == "1":
+  print("Scissors beats paper! You win!")
+  
