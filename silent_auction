@@ -1,0 +1,30 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+import art
+from art import logo
+print(logo)
+print("Welcome to the auction!")
+
+def find_highest_bidder(bidding_record):
+  highest_bid = 0
+  higest_bidder = ""
+  for bidder in bidding_record:
+    bid_amount = bidding_record[bidder]
+    if bid_amount > highest_bid:
+      highest_bid = bid_amount
+      higest_bidder = bidder
+  print(F"The winner is {higest_bidder} with a bid of ${highest_bid}.")
+  
+
+Bids = {}
+Bidding_over = False
+while not Bidding_over:
+  name = input("What is your name? ")
+  price = int(input("What is your bid? $"))
+  Bids[name] = price
+  More_bidders = input("Are ther other bidders? Yes or no? ").lower()
+  if More_bidders == "no":
+    Bidding_over = True 
+    find_highest_bidder(Bids)
+  else:
+    clear()
